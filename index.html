@@ -461,6 +461,49 @@
     .stamp-inner{ flex-direction: column; align-items: flex-start; }
     .contact-links{ align-items: flex-start; text-align: left; }
   }
+
+  /* ---------- COMPETENCY MAP --------- */
+  .comp-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px 40px;
+  }
+  .comp-group-label{
+    font-family: var(--mono);
+    font-size: 10.5px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--paper-dimmer);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid var(--line-strong);
+  }
+  .comp-tags{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  .comp-tag{
+    font-family: var(--mono);
+    font-size: 11.5px;
+    padding: 5px 11px;
+    border: 1px solid var(--line-strong);
+    color: var(--paper-dim);
+    letter-spacing: 0.02em;
+    transition: border-color 0.15s ease, color 0.15s ease;
+  }
+  .comp-tag:hover{
+    border-color: var(--brass);
+    color: var(--paper);
+  }
+  .comp-tag--sector{
+    border-color: rgba(201,161,90,0.4);
+    color: var(--brass);
+  }
+  @media (max-width: 720px){
+    .comp-grid{ grid-template-columns: 1fr; gap: 28px; }
+  }
+
 </style>
 </head>
 <body>
@@ -503,17 +546,21 @@
     <section class="sheet reveal" id="notes">
       <div class="sheet-head">
         <h2 class="sheet-title">General Notes</h2>
-        <span class="sheet-tag">Sheet 1 / 5</span>
+        <span class="sheet-tag">Sheet 1 / 6</span>
       </div>
       <p class="lede">
-        A trim panel off by half a millimeter can stop an assembly line — tracking down exactly why is the part of engineering I enjoy most. I work at the intersection of <strong>mechanical design</strong>, <strong>manufacturing quality</strong>, and <strong>sustainable fuels</strong>: three areas that all come down to getting a product closer to its ideal specification, consistently, at scale. Six months inside Tata Motors' Trim Chassis Final shop taught me how continuous improvement actually happens on a factory floor. A year building a Grey-Taguchi &amp; neural-network model for algae-biodiesel engines taught me how to make that same discipline hold up in a lab. I'm finishing an MSc in Smart &amp; Sustainable Industry at Politecnico di Milano, and I'm looking for a team solving real problems in product development or renewable energy across Europe.
+        A trim panel off by half a millimeter can stop an assembly line — tracking down exactly why is the part of engineering I enjoy most. I work at the intersection of <strong>mechanical design</strong>, <strong>manufacturing quality</strong>, and <strong>sustainable engineering</strong>: three disciplines that all come down to the same question — how do you close the gap between what a drawing specifies and what a factory produces, reliably, at scale?
+        <br><br>
+        Six months inside Tata Motors' Trim Chassis Final shop gave me hands-on experience in <strong>Fit-to-Nominal (FTN) analysis</strong>, <strong>CMM metrology</strong>, <strong>Poka-Yoke error-proofing</strong>, <strong>NVH and EBHS testing</strong>, and <strong>PLM-linked quality documentation</strong> across a live new-vehicle programme. A year of B.Tech research built on top of that: Grey-Taguchi design of experiments on a fully instrumented engine test bench, an ANN surrogate model with 90%+ prediction accuracy, and a peer-reviewed publication on sustainable alternative fuels.
+        <br><br>
+        I'm now finishing an MSc specialising in Smart &amp; Sustainable Industry at Politecnico di Milano — combining <strong>sustainable manufacturing processes</strong>, <strong>materials and damage analysis</strong>, and <strong>machine vision &amp; advanced measurements</strong> with the practical foundation I built on the shop floor. I'm looking for a product development or manufacturing engineering team in Lombardy and northern Italy where precision, continuous improvement, and engineering rigour actually matter.
       </p>
     </section>
 
     <section class="sheet reveal" id="history">
       <div class="sheet-head">
         <h2 class="sheet-title">Revision History</h2>
-        <span class="sheet-tag">Sheet 2 / 5</span>
+        <span class="sheet-tag">Sheet 2 / 6</span>
       </div>
       <table class="rev-table">
         <thead>
@@ -545,7 +592,7 @@
             <td class="rev-date">Jun – Dec 2023</td>
             <td>
               <p class="rev-desc-title">Tata Motors Passenger Vehicles — Product Line Intern</p>
-              <p class="rev-desc-body">Fit-to-Nominal analysis, CMM inspection, and Poka-Yoke error-proofing on a new-vehicle launch across a <span class="num">6-month</span> internship.</p>
+              <p class="rev-desc-body">FTN analysis, CMM metrology, Poka-Yoke error-proofing, NVH &amp; EBHS testing, PLM documentation, and NPI coordination across a <span class="num">6-month</span> OEM product-line internship. Produced <span class="num">6</span> quality document types feeding supplier corrective actions.</p>
             </td>
           </tr>
           <tr>
@@ -553,7 +600,7 @@
             <td class="rev-date">Aug 2023 – May 2024</td>
             <td>
               <p class="rev-desc-title">B.Tech Final Year Project — Lead Researcher</p>
-              <p class="rev-desc-body">Algae-biodiesel engine optimization; ANN model reached <span class="num">&gt;90%</span> prediction accuracy. See Detail A.</p>
+              <p class="rev-desc-body">Grey-Taguchi L25 DOE on an instrumented VCR diesel engine; Levenberg-Marquardt ANN in MATLAB reached <span class="num">&gt;90%</span> prediction accuracy across <span class="num">10</span> performance and emission parameters. See Detail A.</p>
             </td>
           </tr>
           <tr>
@@ -571,7 +618,7 @@
     <section class="sheet reveal" id="detail">
       <div class="sheet-head">
         <h2 class="sheet-title">Detail A — Featured Research</h2>
-        <span class="sheet-tag">Sheet 3 / 5</span>
+        <span class="sheet-tag">Sheet 3 / 6</span>
       </div>
       <div class="detail-grid">
         <div class="detail-copy">
@@ -610,7 +657,7 @@
     <section class="sheet reveal" id="bom">
       <div class="sheet-head">
         <h2 class="sheet-title">Bill of Materials</h2>
-        <span class="sheet-tag">Sheet 4 / 5</span>
+        <span class="sheet-tag">Sheet 4 / 6</span>
       </div>
       <table class="bom-table">
         <thead>
@@ -635,14 +682,112 @@
           <tr><td class="bom-item">012</td><td>Continuous Improvement</td><td class="bom-cat">Process</td></tr>
           <tr><td class="bom-item">013</td><td>New Product Introduction (NPI)</td><td class="bom-cat">Process</td></tr>
           <tr><td class="bom-item">014</td><td>Vehicle Diagnostics — Xentry</td><td class="bom-cat">Automotive</td></tr>
+          <tr><td class="bom-item">015</td><td>Forge 3D — Metal Forming Simulation</td><td class="bom-cat">Simulation</td></tr>
+          <tr><td class="bom-item">016</td><td>Failure Mode &amp; Effects Analysis (FMEA)</td><td class="bom-cat">Quality</td></tr>
+          <tr><td class="bom-item">017</td><td>Design for Manufacturing &amp; Assembly (DFM/DFMA)</td><td class="bom-cat">Process</td></tr>
+          <tr><td class="bom-item">018</td><td>Bill of Materials (BOM) Management</td><td class="bom-cat">Process</td></tr>
+          <tr><td class="bom-item">019</td><td>Noise, Vibration &amp; Harshness (NVH) Testing</td><td class="bom-cat">Test</td></tr>
+          <tr><td class="bom-item">020</td><td>EBHS Air-Leakage &amp; Smoke Testing</td><td class="bom-cat">Test</td></tr>
+          <tr><td class="bom-item">021</td><td>ISO 9001 Quality Management Systems</td><td class="bom-cat">Quality</td></tr>
+          <tr><td class="bom-item">022</td><td>Lean Manufacturing / 5S / Kaizen</td><td class="bom-cat">Process</td></tr>
+          <tr><td class="bom-item">023</td><td>Renewable Energy &amp; Sustainable Fuels</td><td class="bom-cat">Domain</td></tr>
+          <tr><td class="bom-item">024</td><td>Non-Destructive Testing (NDT) &amp; Metrology</td><td class="bom-cat">Test</td></tr>
         </tbody>
       </table>
+    </section>
+
+    <section class="sheet reveal" id="competency">
+      <div class="sheet-head">
+        <h2 class="sheet-title">Competency Map</h2>
+        <span class="sheet-tag">Sheet 5 / 6</span>
+      </div>
+      <p class="lede" style="margin-bottom:36px;">Skills grouped by the categories Italian engineering SMEs filter on most — from precision machinery and automotive to energy and sustainable manufacturing.</p>
+      <div class="comp-grid">
+
+        <div class="comp-group">
+          <div class="comp-group-label">CAD &amp; Design</div>
+          <div class="comp-tags">
+            <span class="comp-tag">SolidWorks</span>
+            <span class="comp-tag">CATIA V5</span>
+            <span class="comp-tag">AutoCAD</span>
+            <span class="comp-tag">3D Modelling</span>
+            <span class="comp-tag">Technical Drawing</span>
+            <span class="comp-tag">BOM Management</span>
+          </div>
+        </div>
+
+        <div class="comp-group">
+          <div class="comp-group-label">Simulation &amp; Analysis</div>
+          <div class="comp-tags">
+            <span class="comp-tag">ANSYS FEA</span>
+            <span class="comp-tag">Forge 3D</span>
+            <span class="comp-tag">MATLAB</span>
+            <span class="comp-tag">Design of Experiments</span>
+            <span class="comp-tag">ANOVA</span>
+            <span class="comp-tag">ANN Modelling</span>
+          </div>
+        </div>
+
+        <div class="comp-group">
+          <div class="comp-group-label">Test &amp; Metrology</div>
+          <div class="comp-tags">
+            <span class="comp-tag">CMM</span>
+            <span class="comp-tag">Fit-to-Nominal (FTN)</span>
+            <span class="comp-tag">NVH Testing</span>
+            <span class="comp-tag">EBHS Air-Leakage</span>
+            <span class="comp-tag">Engine Test Bench &amp; DAQ</span>
+            <span class="comp-tag">NDT &amp; Metrology</span>
+            <span class="comp-tag">Smoke Testing</span>
+          </div>
+        </div>
+
+        <div class="comp-group">
+          <div class="comp-group-label">Manufacturing &amp; Quality</div>
+          <div class="comp-tags">
+            <span class="comp-tag">PLM</span>
+            <span class="comp-tag">NPI</span>
+            <span class="comp-tag">Poka-Yoke</span>
+            <span class="comp-tag">FMEA</span>
+            <span class="comp-tag">Root Cause Analysis</span>
+            <span class="comp-tag">DFM / DFMA</span>
+            <span class="comp-tag">ISO 9001</span>
+            <span class="comp-tag">Lean / 5S / Kaizen</span>
+            <span class="comp-tag">Continuous Improvement</span>
+            <span class="comp-tag">Prototype Validation</span>
+          </div>
+        </div>
+
+        <div class="comp-group">
+          <div class="comp-group-label">Target Sectors</div>
+          <div class="comp-tags">
+            <span class="comp-tag comp-tag--sector">Automotive &amp; e-Mobility</span>
+            <span class="comp-tag comp-tag--sector">Renewable Energy</span>
+            <span class="comp-tag comp-tag--sector">Industrial Machinery</span>
+            <span class="comp-tag comp-tag--sector">Packaging Automation</span>
+            <span class="comp-tag comp-tag--sector">NDT &amp; Inspection</span>
+            <span class="comp-tag comp-tag--sector">Sustainable Manufacturing</span>
+          </div>
+        </div>
+
+        <div class="comp-group">
+          <div class="comp-group-label">Location &amp; Availability</div>
+          <div class="comp-tags">
+            <span class="comp-tag">Lecco, Lombardy</span>
+            <span class="comp-tag">Northern Italy</span>
+            <span class="comp-tag">Available Early 2027</span>
+            <span class="comp-tag">Full-Time &amp; Internship</span>
+            <span class="comp-tag">English C1</span>
+            <span class="comp-tag">Italian A2</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
     <section class="sheet reveal" id="education" style="border-bottom: none;">
       <div class="sheet-head">
         <h2 class="sheet-title">Education</h2>
-        <span class="sheet-tag">Sheet 5 / 5</span>
+        <span class="sheet-tag">Sheet 6 / 6</span>
       </div>
       <div class="edu-list">
         <div class="edu-item">
